@@ -19,12 +19,13 @@
       <a class="navbar-brand" href="#">CONNECT</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="blog">Blog</a></li>
-      <li><a href="forum">Forum</a></li>
-      <li><a href="chat">Chat</a></li>
+      <li class="active"><a href="${pageContext.request.contextPath}#">Home</a></li>
+      <li><a href="${pageContext.request.contextPath}/blog">Blog</a></li>
+      <li><a href="${pageContext.request.contextPath}/forum">Forum</a></li>
+      
       <sec:authorize access="isAuthenticated()">
-       <li><a href="profile">Profile</a></li>
+      <li><a href="${pageContext.request.contextPath}/chat">Chat</a></li>
+       <li><a href="${pageContext.request.contextPath}/profile">Profile</a></li>
       </sec:authorize>
     </ul>
     <sec:authorize access="isAuthenticated()">
@@ -37,7 +38,7 @@
 								</ul>		</sec:authorize>
       <sec:authorize access="!isAuthenticated()">
      <ul class="nav navbar-nav navbar-right">
-      <li><a href="login"><span class="glyphicon glyphicon-user"></span> Sign Up/Sign In</a></li>
+      <li><a href="${pageContext.request.contextPath}/login"><span class="glyphicon glyphicon-user"></span> Sign Up/Sign In</a></li>
     <!--   <li><a href="register"><span class="glyphicon glyphicon-log-in"></span> Login</a></li> -->
     </ul>
     </sec:authorize>

@@ -82,7 +82,7 @@ table tr:nth-child(even) {
 								class="btn btn-default">Edit</button></td>
 				</sec:authorize>
 				<td>
-				<a href="viewblog/{{blog.b_id}}"
+				<a href="${pageContext.request.contextPath}/viewblog/{{blog.b_id}}"
 								class="btn btn-default">view</a></td>
 				</tr>
 			</tbody>
